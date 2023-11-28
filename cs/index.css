@@ -1,0 +1,1276 @@
+*{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+}
+
+.btn-bar, .btn-x{
+    display: none;
+}
+
+button{
+    background: aqua;
+    color: white;
+    padding: 1vmax 2vmax;
+    transition: all 0.5s;
+    border: 0;
+    font-size: 1vmax;
+    outline: 0;
+    border-radius: 8px;
+    transition: all 0.5s;
+    z-index: 10;
+}
+
+button:hover{
+    background: 0;
+    border: 2px solid aqua;
+    color: aqua;
+    cursor: pointer;
+}
+
+.top{
+    position: fixed;
+    right: 5vmax;
+    bottom: 5vmax;
+    background: aqua;
+    color: white;
+    border-radius: 15px;
+    padding: 1vmax;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    font-size: 25px;
+}
+
+
+/* Navbar Section */
+.NavbarContainer{
+    width: 100%;
+    position: fixed;
+    background-color: white;
+    z-index: 11;
+    height: 12vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vmax;
+}
+
+.nav-left{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-left img{
+    width: 60px;
+}
+
+.nav-left h1{
+    font-size: 28px;
+    font-family: sans-serif;
+}
+
+.nav-left h1 span{
+    color: aqua;
+}
+
+.nav-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+.nav-right ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+}
+
+.nav-right ul li a{
+   color: black;
+   font-size: 1vmax;
+   font-family: sans-serif;
+}
+
+.nav-right ul li:last-child a{
+    color: white;
+}
+
+/* Banner Section */
+.bannerContainer{
+    width: 100%;
+    background-image: url(https://internship.codeclause.com/assets/img/hero-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.bannerContainer::before{
+    width: 100%;
+    height: 600px;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    content: '';
+}
+
+.banner-box{
+    width: 90%;
+    height: 400px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.banner-card{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    height: 280px;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.banner-card h1{
+    z-index: 10;
+    font-size: 45px;
+    font-family: sans-serif;
+    text-transform: capitalize;
+}
+
+.banner-card p{
+    z-index: 10;
+    font-size: 1.3vmax;
+    width: 80%;
+    line-height: 1.8vmax;
+    font-family: sans-serif;
+    padding: 0.3vmax;
+    word-spacing: 0.2vmax;
+}
+
+/* Feature Section */
+.FeatureContainer{
+    width: 100%;
+    height: 300px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1vmax;
+}
+
+.Feature_box{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Feature_card{
+    width: 30%;
+    background-color: white;
+    padding: 1vmax;
+    border-radius: 15px;
+    display: flex;
+    margin: 1vmax;
+    box-shadow: 0 10px 15px gray;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+.Feature_card:hover{
+    transform: scale(1.1);
+    height: 200px;
+}
+
+.Feature_card .feat_icon{
+    padding: 1vmax;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-35px);
+    border-radius: 50%;
+    background-color: white;
+    font-size: 18px;
+    color: aqua;
+    box-shadow: 0 5px 11px rgba(0, 0, 0, 0.3);
+}
+
+.Feature_card .feat_info{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Feature_card .feat_info h1{
+    font: 600 30px sans-serif;
+}
+
+.Feature_card .feat_info p{
+    font: 300 18px sans-serif;
+}
+
+
+/* Course Section */
+.Course_Container{
+    width: 100%;
+    background-color: black;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Course_Container::before{
+    content: '';
+    width: 100%;
+    height: 300px;
+    background-color: white;
+    position: absolute;
+    transform: translatey(-201px);
+    clip-path: polygon(0 0, 0 50%, 100% 0);
+}
+
+.Course_Container:after{
+    content: '';
+    width: 100%;
+    height: 300px;
+    background-color: white;
+    position: absolute;
+    transform: translatey(200px);
+    clip-path: polygon(100% 36%, 0% 100%, 100% 100%);
+}
+
+.course_left{
+    width: 40%;
+    height: 300px;
+    padding-left: 80px;
+}
+
+.course_left h1{
+    font: 600 45px sans-serif;
+    padding: 1vmax;
+    color: white;
+}
+
+.course_left p{
+    font: 600 18px sans-serif;
+    padding: 1vmax;
+    color: white;
+    line-height: 2vmax;
+}
+
+.course_left button{
+    margin-left: 1vmax;
+    border-radius: 30px;
+}
+
+.course_right{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.course_box{
+    width: 90%;
+    padding: 1vmax;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.course_box .course_card{
+    margin: 0.5vmax;
+    width: 350px;
+    padding: 2vmax;
+    height: 170px;
+}
+
+.course_icon{
+    font-size: 25px;
+    color: aqua;
+}
+
+.course_info h5{
+    font: 600 20px sans-serif;
+    padding: 1vmax 0;
+    color: white;
+}
+
+.course_info p{
+    font: 300 15px sans-serif;
+    color: gray;
+}
+
+/* Testimonials Section */
+.TestimonialsContainer{
+    width: 100%;
+    background-color: white;
+    height: 900px;
+    padding: 1vmax;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Test_head{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1vmax;
+}
+
+.Test_head h1{
+    font: 600 45px sans-serif;
+    padding: 0.3vmax;
+}
+
+.Test_head span{
+    width: 10%;
+    margin: 0.3vmax;
+    height: 3px;
+    border-radius: 30px;
+    background-color: aqua;
+}
+
+.Test_head p{
+    padding: 1vmax;
+    font: 500 0.9vmax sans-serif;
+}
+
+.Test_Slider{
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 1vmax;
+}
+
+
+.Test_card{
+    padding: 2vmax;
+    width: 300px;
+    margin: 1vmax;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px gray;
+}
+
+.Test_img{
+    padding: 0.5vmax;
+    padding-top: 1vmax;
+    padding-bottom: 1vmax;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.Test_img img{
+    width: 50px;
+    height: 50px;
+}
+
+.Test_img .T1{
+  width: 30%;
+  padding-right: 1vmax;
+}
+
+.Test_img .T2{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.Test_img .T2 h4{
+    font: 600 1.2vmax sans-serif;
+}
+
+.Test_img .T2 h6{
+    font: 500 0.9vmax sans-serif;
+    padding-top: 0.3vmax;
+    color: gray;
+}
+
+.Test_info{
+    padding: 1vmax 0;
+    width: 100%;
+}
+
+.Test_info p{
+    font: 300 1vmax sans-serif;
+    word-spacing: 0.3vmax;
+    line-height: 1.7vmax;
+    justify-content: justify;
+    color: gray;
+    font-style: italic;
+}
+
+/* FAQ Section */
+.FAQContainer{
+    width: 100%;
+    background-color: white;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2vmax;
+    padding-bottom: 5vmax;
+    justify-content: space-around;
+}
+
+.faq_head{
+    padding: 2vmax;
+    display: flex;
+    align-items: center;
+    flex-direction: column;   
+}
+
+.faq_head span{
+    width: 20%;
+    background-color: aqua;
+    margin: 1vmax;
+    height: 3px;
+    border-radius: 10px;
+}
+
+.faq_head h1{
+    padding: 1vmax;
+    font: 600 2vmax sans-serif;
+}
+
+
+
+.faq_box{
+    width: 90%;
+}
+
+.faq_box h1{
+    font: 600 1.3vmax sans-serif;
+}
+
+.f1,.f2{
+    padding: 0.2vmax;
+    transition: all 0.5s;
+}
+
+
+.f1{
+    border-bottom: 1px solid gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vmax;
+    /* display: none; */
+}
+
+.f2{
+    display: flex;
+    justify-content: space-between;
+    padding: 1vmax;
+    display: none;
+    border-bottom: 1px solid gray;
+}
+
+.btn-faq{
+    color: black;
+    border: 0;
+    background: 0;
+    outline: 0;
+}
+
+.btn-faq:hover{
+    border: 0;
+    background: 0;
+    color: black;
+    cursor: pointer;
+}
+
+/* Footer Section */
+.footerContainer{
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 1vmax;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer1{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1vmax;
+}
+
+.footer1 div{
+    margin-right: 0.5vmax;
+    width: 20%;
+    padding: 1vmax;
+    display: flex;
+    flex-direction: column;
+}
+
+.foot1 h1{
+    font: 600 1.6vmax sans-serif;
+}
+
+.foot1 h1 span{
+    color: aqua;
+}
+
+.foot2 h1, .foot3 h1, .foot4 h1{
+    font: 600 1.2vmax sans-serif;
+}
+
+.foot2 span, .foot3 span, .foot4 span{
+    width: 20%;
+    background-color: aqua;
+    padding: 0.1vmax;
+    margin: 1vmax;
+    margin-left: 0;
+}
+
+.foot2 ul, .foot3 ul{
+    padding: 0.5vmax 2vmax;
+    list-style: disc;
+}
+
+.foot2 ul li, .foot3 ul li{
+    padding: 0.3vmax;
+    font: 300 1vmax sans-serif;
+}
+
+.foot1 p, .foot4 p{
+    padding: 1vmax 0;
+    font: 300 1vmax sans-serif;
+    word-spacing: 0.3vmax;
+    line-height: 1.5vmax;
+}
+
+.foot1 h4{
+    padding: 0.5vmax 0;
+    font: 500 1vmax sans-serif;
+}
+
+.footer2{
+    padding: 1vmax;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer2 .foot5, .footer2 .foot6{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.footer2 p{
+    font: 600 1vmax sans-serif;
+    line-height: 1.7vmax;
+    word-spacing: 0.2vmax;
+}
+
+.footer2 .foot6 .foot6_box{
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+}
+
+@media screen and (min-width: 300px) and (max-width: 600px) {
+    .btn-x{
+        color: white;
+        border: 0;
+        background: 0;
+        outline: 0;
+        padding: 1vmax;
+        display: flex;
+        position: absolute;
+        z-index: 11;
+        top: 1vmax;
+        font-size: 25px;
+        left: 1vmax;
+    }
+
+    .btn-x:hover{
+        border: 0;
+        background: 0;
+        outline: 0;
+        cursor: pointer;
+        padding: 1vmax;
+    }
+
+    .btn-bar{
+        font-size: 25px;
+        color: black;
+        border: 0;
+        background: 0;
+        outline: 0;
+        padding: 1vmax;
+        display: flex;
+    }
+
+    .btn-bar:hover{
+        border: 0;
+        background: 0;
+        outline: 0;
+        cursor: pointer;
+        padding: 1vmax;
+    }
+
+
+    button{
+        background: aqua;
+        color: white;
+        padding: 1vmax 2vmax;
+        transition: all 0.5s;
+        border: 0;
+        font-size: 1vmax;
+        outline: 0;
+        border-radius: 8px;
+        transition: all 0.5s;
+        z-index: 10;
+    }
+    
+    button:hover{
+        background: 0;
+        border: 2px solid aqua;
+        color: aqua;
+        cursor: pointer;
+    }
+    
+    
+    /* Navbar Section */
+    .NavbarContainer{
+        width: 100%;
+        background-color: white;
+        height: 12vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2vmax;
+    }
+    
+    .nav-left{
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .nav-left img{
+        width: 60px;
+    }
+    
+    .nav-left h1{
+        font-size: 28px;
+        font-family: sans-serif;
+    }
+    
+    .nav-left h1 span{
+        color: aqua;
+    }
+    
+    .nav-right{
+        transform: translateX(415px);
+        display: none;
+        transition: all 0.5s;
+        background-color: black;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        z-index: 11;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .nav-right ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 90%;
+        height: 500px;
+    }
+    
+    .nav-right ul li a{
+       color: white;
+       font-size: 3vmax;
+       font-family: sans-serif;
+    }
+    
+    .nav-right ul li button{
+        padding: 2vmax 4vmax;
+        font-size: 2vmax;
+        font-family: sans-serif;
+     }
+
+    .nav-right ul li:last-child a{
+        color: white;
+    }
+    
+    /* Banner Section */
+    .bannerContainer{
+        width: 100%;
+        background-image: url(https://internship.codeclause.com/assets/img/hero-bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+    
+    .bannerContainer::before{
+        width: 100%;
+        height: 400px;
+        background-color: rgba(0, 0, 0, 0.6);
+        position: absolute;
+        content: '';
+    }
+    
+    .banner-box{
+        width: 100%;
+        height: 400px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    .banner-card{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 0px;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    .banner-card h1{
+        z-index: 10;
+        font-size: 30px;
+        font-family: sans-serif;
+        text-transform: capitalize;
+    }
+    
+    .banner-card p{
+        z-index: 10;
+        font-size: 2vmax;
+        width: 80%;
+        line-height: 3vmax;
+        text-align: center;
+        font-family: sans-serif;
+        padding: 1vmax;
+        word-spacing: 0.2vmax;
+    }
+
+    .banner-card button{
+        padding: 2vmax 4vmax;
+        font-size: 2vmax;
+    }
+    
+    /* Feature Section */
+    .FeatureContainer{
+        width: 100%;
+        height: 500px;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1vmax;
+    }
+    
+    .Feature_box{
+        width: 80%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    .Feature_card{
+        width: 40%;
+        background-color: white;
+        padding: 1vmax;
+        border-radius: 15px;
+        display: flex;
+        margin: 1vmax;
+        margin-bottom: 5vmax;
+        box-shadow: 0 10px 15px gray;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s;
+    }
+    
+    .Feature_card:hover{
+        transform: scale(1.1);
+        height: 200px;
+    }
+    
+    .Feature_card .feat_icon{
+        padding: 2vmax;
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-35px);
+        border-radius: 50%;
+        background-color: white;
+        font-size: 18px;
+        color: aqua;
+        box-shadow: 0 5px 11px rgba(0, 0, 0, 0.3);
+    }
+    
+    .Feature_card .feat_info{
+        width: 100%;
+        display: flex;
+        margin-bottom: 1vmax;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .Feature_card .feat_info h1{
+        font: 600 20px sans-serif;
+    }
+    
+    .Feature_card .feat_info p{
+        font: 300 12px sans-serif;
+    }
+    
+    
+    /* Course Section */
+    .Course_Container{
+        width: 100%;
+        background-color: black;
+        height: 1200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    .Course_Container::before{
+        content: '';
+        width: 100%;
+        height: 300px;
+        background-color: white;
+        position: absolute;
+        transform: translatey(-450px);
+        clip-path: polygon(0 0, 0 50%, 100% 0);
+    }
+    
+    .Course_Container:after{
+        content: '';
+        width: 100%;
+        height: 300px;
+        background-color: white;
+        position: absolute;
+        transform: translateY(452px);
+        clip-path: polygon(100% 36%, 0% 100%, 100% 100%);
+    }
+    
+    .course_left{
+        width: 73%;
+        height: 80px;
+        padding-left: 0px;
+    }
+    
+    .course_left h1{
+        font: 600 30px sans-serif;
+        padding: 1vmax;
+        color: white;
+    }
+    
+    .course_left p{
+        font: 300 14px sans-serif;
+        padding: 1vmax;
+        color: white;
+        line-height: 3vmax;
+    }
+    
+    .course_left button{
+        margin-left: 1vmax;
+        font-size: 12px;
+        padding: 2vmax 4vmax;
+        border-radius: 30px;
+    }
+    
+    .course_right{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+    }
+    
+    .course_box{
+        width: 100%;
+        flex-wrap: wrap;
+        padding: 1vmax;
+        display: flex;
+        margin-bottom: 210px;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    
+    .course_box .course_card{
+        margin: 1vmax;
+        width: 80%;
+        padding: 2vmax;
+        height: 140px;
+    }
+    
+    .course_icon{
+        font-size: 25px;
+        color: aqua;
+    }
+    
+    .course_info h5{
+        font: 600 20px sans-serif;
+        padding: 1vmax 0;
+        color: white;
+    }
+    
+    .course_info p{
+        font: 300 15px sans-serif;
+        line-height: 3vmax;
+        color: gray;
+    }
+    
+    /* Testimonials Section */
+    .TestimonialsContainer{
+        width: 100%;
+        background-color: white;
+        height: 900px;
+        padding: 1vmax;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .Test_head{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1vmax;
+    }
+    
+    .Test_head h1{
+        font: 600 3vmax sans-serif;
+        padding: 0.3vmax;
+    }
+    
+    .Test_head span{
+        width: 10%;
+        margin: 0.3vmax;
+        height: 3px;
+        border-radius: 30px;
+        background-color: aqua;
+    }
+    
+    .Test_head p{
+        padding: 1vmax;
+        font: 500 1vmax sans-serif;
+    }
+    
+    .Test_Slider{
+        width: 70%;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        padding: 1vmax;
+    }
+    
+    
+    .Test_card{
+        padding: 2vmax;
+        width: 300px;
+        margin: 3vmax;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 8px 25px gray;
+    }
+    
+    .Test_img{
+        padding: 0.5vmax;
+        padding-top: 1vmax;
+        padding-bottom: 1vmax;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .Test_img img{
+        width: 50px;
+        height: 50px;
+    }
+    
+    .Test_img .T1{
+      width: 30%;
+      padding-right: 1vmax;
+    }
+    
+    .Test_img .T2{
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .Test_img .T2 h4{
+        font: 600 2vmax sans-serif;
+    }
+    
+    .Test_img .T2 h6{
+        font: 500 1.2vmax sans-serif;
+        padding-top: 0.3vmax;
+        color: gray;
+    }
+    
+    .Test_info{
+        padding: 1vmax 0;
+        width: 100%;
+    }
+    
+    .Test_info p{
+        font: 300 1.4vmax sans-serif;
+        word-spacing: 0.3vmax;
+        line-height: 1.7vmax;
+        justify-content: justify;
+        color: gray;
+        font-style: italic;
+    }
+    
+    /* FAQ Section */
+    .FAQContainer{
+        width: 100%;
+        background-color: white;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2vmax;
+        padding-bottom: 5vmax;
+        justify-content: space-around;
+    }
+    
+    .faq_head{
+        padding: 2vmax;
+        display: flex;
+        align-items: center;
+        flex-direction: column;   
+    }
+    
+    .faq_head span{
+        width: 20%;
+        background-color: aqua;
+        margin: 1vmax;
+        height: 3px;
+        border-radius: 10px;
+    }
+    
+    .faq_head h1{
+        padding: 1vmax;
+        font: 600 2vmax sans-serif;
+    }
+    
+    .faq_box{
+        width: 90%;
+    }
+    
+    .faq_box h1{
+        font: 600 1.5vmax sans-serif;
+    }
+
+    .f2 p{
+        font: 300 1.2vmax sans-serif;
+        line-height: 1.7vmax;
+        word-spacing: 0.2vmax;
+    }
+    
+    .f1,.f2{
+        padding: 0.2vmax;
+        transition: all 0.5s;
+    }
+    
+    
+    .f1{
+        border-bottom: 1px solid gray;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1vmax;
+    }
+    
+    .f2{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 1vmax;
+        display: none;
+        border-bottom: 1px solid gray;
+    }
+    
+    .btn-faq{
+        color: black;
+        border: 0;
+        background: 0;
+        outline: 0;
+    }
+    
+    .btn-faq:hover{
+        border: 0;
+        background: 0;
+        color: black;
+        cursor: pointer;
+    }
+    
+    /* Footer Section */
+    .footerContainer{
+        width: 100%;
+        background-color: black;
+        color: white;
+        padding: 1vmax;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .footer1{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 1vmax;
+    }
+    
+    .footer1 div{
+        margin-right: 0.5vmax;
+        width: 40%;
+        padding: 1vmax;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .foot1 h1{
+        font: 600 1.6vmax sans-serif;
+    }
+    
+    .foot1 h1 span{
+        color: aqua;
+    }
+    
+    .foot2 h1, .foot3 h1, .foot4 h1{
+        font: 600 1.2vmax sans-serif;
+    }
+    
+    .foot2 span, .foot3 span, .foot4 span{
+        width: 20%;
+        background-color: aqua;
+        padding: 0.1vmax;
+        margin: 1vmax;
+        margin-left: 0;
+    }
+    
+    .foot2 ul, .foot3 ul{
+        padding: 0.5vmax 2vmax;
+        list-style: disc;
+    }
+    
+    .foot2 ul li, .foot3 ul li{
+        padding: 0.3vmax;
+        font: 300 1vmax sans-serif;
+    }
+    
+    .foot1 p, .foot4 p{
+        padding: 1vmax 0;
+        font: 300 1vmax sans-serif;
+        word-spacing: 0.3vmax;
+        line-height: 1.5vmax;
+    }
+    
+    .foot1 h4{
+        padding: 0.5vmax 0;
+        font: 500 1vmax sans-serif;
+    }
+    
+    .footer2{
+        padding: 1vmax;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .footer2 .foot5, .footer2 .foot6{
+        width: 100%;
+        display: flex;
+        padding: 1vmax;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .footer2 p{
+        font: 600 1.2vmax sans-serif;
+        line-height: 1.7vmax;
+        word-spacing: 0.2vmax;
+    }
+    
+    .footer2 .foot6 .foot6_box{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+
+
+
+
+
+
+
